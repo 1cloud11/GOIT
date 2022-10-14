@@ -64,4 +64,5 @@ def main():
             print(f"Available commands: {commands}")
 
 
-main()
+if __name__ == '__main__':
+    main()

@@ -1,12 +1,5 @@
 FROM python:3.10
-WORKDIR /assistant_m
 RUN pip install pipenv
+ADD . .
 
-COPY Pipfile Pipfile
-COPY Pipfile.lock Pipfile.lock
-
-RUN pipenv install --system --deploy
-
-CMD python app.py
-
-COPY . .
+CMD [ "python", "./app.py" ]
